@@ -1,5 +1,22 @@
 # Sentinel 控制台
 
+## 与原版差异
+
+1. 去除了 `Sentinel 企业版` 标签
+2. 支持 `流控规则` 持久化到 [Nacos](https://nacos.io/)
+
+使用 `虚拟机参数` 或 `环境变量` 配置 Nacos 信息：
+
+| 参数                   | 作用         | 默认值            |
+|----------------------|------------|----------------|
+| `nacos.server-addr`  | Nacos 服务地址 | localhost:8848 |
+| `nacos.username`     | Nacos 用户名  | nacos          |
+| `nacos.password`     | Nacos 密码   | nacos          |
+| `nacos.namespace`    | Nacos 命名空间 | public         |
+| `nacos.cluster-name` | Nacos 集群名称 | 空              |
+
+注意：使用配置组名：`SENTINEL_GROUP`
+
 ## 0. 概述
 
 Sentinel 控制台是流量控制、熔断降级规则统一配置和管理的入口，它为用户提供了机器自发现、簇点链路自发现、监控、规则配置等功能。在 Sentinel 控制台上，我们可以配置规则并实时查看流量控制效果。
